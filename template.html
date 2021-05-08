@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<div>
+    <h3>Challenges:</h3><br/>
+    {{ range $challenge := .Challenges }}
+    <span>{{ $challenge}}</span><br/>
+    {{ end }}
+    <br/>
+
+    <h3>Cheats:</h3><br/>
+    {{ range $cheat := .Cheats }}
+    <span>{{ $cheat }}</span><br/>
+    {{ end }}
+
+    {{ if .Quote }}
+    <div>{{ .Quote }}</div>
+    {{ end }}
+</div>
+</body>
+</html>
