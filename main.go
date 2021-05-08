@@ -27,6 +27,6 @@ func main() {
 		log.Fatalf("unable to send the mail: %s", err)
 	}
 
-	fmt.Println("Email sent!")
+	fmt.Println("Email(s) sent!")
 }
 

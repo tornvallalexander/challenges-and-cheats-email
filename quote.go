@@ -32,7 +32,7 @@ func GetRandomQuote() string {
 	}
 
 	// convert body to type string
-	var quoteResponse []Response // we use []Response instead of Response because json is array
+	var quoteResponse []Response
 	err = json.Unmarshal(body, &quoteResponse)
 	if err != nil {
 		log.Fatalf("unable to unmarsh body content %s", err)
