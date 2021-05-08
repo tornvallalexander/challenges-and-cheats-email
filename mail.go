@@ -41,7 +41,7 @@ var cheats = []string{
 	"Monkeytype for 1 hour",
 }
 
-// NewSmtpServer initializes our email credentials
+// NewSmtpServer returns a pointer to a new instance of the SmtpServer struct
 func NewSmtpServer(host string, port string) *SmtpServer {
 	return &SmtpServer{
 		Host: host,
@@ -49,7 +49,7 @@ func NewSmtpServer(host string, port string) *SmtpServer {
 	}
 }
 
-// NewEmailContent uses the subject and quote arguments to return a complete email struct
+// NewEmailContent uses the subject and quote arguments to return a pointer of the complete email struct
 func NewEmailContent(subject string) *EmailContent {
 	challengesSlice := GetRandomPicks(challenges)
 	cheatsSlice := GetRandomPicks(cheats)
@@ -62,6 +62,7 @@ func NewEmailContent(subject string) *EmailContent {
 	}
 }
 
+// Address is a method for the SmtpServer struct that returns the desired format
 func (s *SmtpServer) Address() string {
 	return s.Host + ":" + s.Port
 }

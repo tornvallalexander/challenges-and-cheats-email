@@ -7,7 +7,7 @@ import (
 
 func GetRandomPicks(array []string) []string {
 	picks := make([]string, 0)
-	// to make sure we don't get stuck in a never-ending for loop for whatever reason
+	// to make sure we don't get stuck in a never-ending loop for whatever reason
 	bigNumber := 1000
 
 	for i := 0; i < bigNumber; i++ {
