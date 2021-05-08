@@ -14,7 +14,7 @@ In order to use it properly you will need to add an environment file (`.env`) wi
 - `RECIPIENTS` - a list of the recipients, the email addresses which you intent to send your email to, separated by a "," [comma] i.e. `someone@gmail.com,someone.else@gmail.com`
 
 # Run the application
-You can simply run the entire application (all the files at once) by running go run ., given that you are in the actual directory with the files. This is simply due to the fact that they all belong to the same "main" package
+You can simply run the entire application (all the files at once) by running `go run .`, given that you are in the actual directory with the files. This is simply due to the fact that they all belong to the same "main" package
 
 # Other
 Obviously, this is a very basic and simple way to programmatically send an email. I encourage you to experiment with it and come up with your own improvements.
