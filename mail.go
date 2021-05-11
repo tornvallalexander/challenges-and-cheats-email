@@ -11,7 +11,7 @@ type EmailContent struct {
 	Subject string
 	Challenges []string
 	Cheats []string
-	Quote string
+	Quote Response
 }
 
 // challenges data

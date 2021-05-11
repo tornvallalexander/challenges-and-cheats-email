@@ -6,17 +6,20 @@
 <div>
     <h3>Challenges:</h3><br/>
     {{ range $challenge := .Challenges }}
-    <span>{{ $challenge}}</span><br/>
+        <span>{{ $challenge}}</span><br/>
     {{ end }}
     <br/>
 
     <h3>Cheats:</h3><br/>
     {{ range $cheat := .Cheats }}
-    <span>{{ $cheat }}</span><br/>
+        <span>{{ $cheat }}</span><br/>
     {{ end }}
 
+    <br/>
+
     {{ if .Quote }}
-    <div>{{ .Quote }}</div>
+        <h3>Quote of the Day:</h3><br/>
+        <div>{{ .Quote.Quote }}</div><span> — {{ .Quote.Author }}</span>
     {{ end }}
 </div>
 </body>

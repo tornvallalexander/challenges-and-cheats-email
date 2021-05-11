@@ -16,7 +16,8 @@ type Response struct {
 
 const QuoteAPI = "https://zenquotes.io/api/random"
 
-func GetRandomQuote() string {
+// GetRandomQuote returns a response with the quote struct
+func GetRandomQuote() Response {
 	client := http.Client{
 		Timeout: 2 * time.Second,
 	}
@@ -35,8 +36,8 @@ func GetRandomQuote() string {
 	var quoteResponse []Response
 	err = json.Unmarshal(body, &quoteResponse)
 	if err != nil {
-		log.Fatalf("unable to unmarsh body content %s", err)
+		log.Fatalf("unable to unmarshal body content: %s", err)
 	}
 
-	return quoteResponse[0].HTML
+	return quoteResponse[0]
 }
