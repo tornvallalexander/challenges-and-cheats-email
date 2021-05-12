@@ -11,7 +11,7 @@ In order to use it properly you will need to add an environment file (`.env`) wi
 - `PASSWORD_FROM_ADDRESS` - the password to your gmail address
 - `SMTP_HOST` - not typically a secret, most often used is "smtp.gmail.com"
 - `SMTP_PORT` - once again, not really a secret, most often used is port 587
-- `RECIPIENTS` - a list of the recipients, the email addresses which you intent to send your email to, separated by a "," [comma] i.e. `someone@gmail.com,someone.else@gmail.com`
+- `RECIPIENTS` - a list of the recipients, the email addresses which you intend to send your email to, separated by a "," [comma] i.e. `someone@gmail.com,someone.else@gmail.com`
 
 # Run the application
 You can simply run the entire application (all the files at once) by running `go run .`, given that you are in the actual directory with the files. This is simply due to the fact that they all belong to the same "main" package
