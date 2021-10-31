@@ -8,18 +8,18 @@ import (
 )
 
 type Credentials struct {
-	EmailAddress string
+	EmailAddress  string
 	EmailPassword string
-	SmtpHost string
-	SmtpPort string
-	Recipients []string
+	SmtpHost      string
+	SmtpPort      string
+	Recipients    []string
 }
 
 // GetCredentials is used for loading all credentials needed from .env file
 func GetCredentials() *Credentials {
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatal("unable to load .env file")
+		log.Fatal("unable to load .env file: ", err)
 	}
 
 	emailAddress := os.Getenv("EMAIL_FROM_ADDRESS")
@@ -31,10 +31,10 @@ func GetCredentials() *Credentials {
 	recipients := strings.Split(os.Getenv("RECIPIENTS"), ",")
 
 	return &Credentials{
-		EmailAddress: emailAddress,
+		EmailAddress:  emailAddress,
 		EmailPassword: emailPassword,
-		SmtpHost: smtpHost,
-		SmtpPort: smtpPort,
-		Recipients: recipients,
+		SmtpHost:      smtpHost,
+		SmtpPort:      smtpPort,
+		Recipients:    recipients,
 	}
 }
